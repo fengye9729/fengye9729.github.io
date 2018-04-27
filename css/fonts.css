@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'fyflying';
+  src:  url('../fonts/fyflying.eot?hxr3ja');
+  src:  url('../fonts/fyflying.eot?hxr3ja#iefix') format('embedded-opentype'),
+    url('../fonts/fyflying.ttf?hxr3ja') format('truetype'),
+    url('../fonts/fyflying.woff?hxr3ja') format('woff'),
+    url('../fonts/fyflying.svg?hxr3ja#fyflying') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fyflying' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fy-android2:before {
+  content: "\e901";
+  color: #a4c639;
+}
+.fy-apple:before {
+  content: "\e902";
+  color: #999;
+}
+.fy-applemusic:before {
+  content: "\e903";
+}
+.fy-css3:before {
+  content: "\e904";
+  color: #1572b6;
+}
+.fy-csswizardry:before {
+  content: "\e905";
+  color: #f43059;
+}
+.fy-dribbble2:before {
+  content: "\e906";
+  color: #ea4c89;
+}
+.fy-facebook2:before {
+  content: "\e907";
+  color: #3b5998;
+}
+.fy-github2:before {
+  content: "\e908";
+}
+.fy-google:before {
+  content: "\e909";
+  color: #4285f4;
+}
+.fy-instagram2:before {
+  content: "\e90a";
+  color: #e4405f;
+}
+.fy-telegram:before {
+  content: "\e90b";
+  color: #2ca5e0;
+}
+.fy-tencentqq:before {
+  content: "\e90c";
+  color: #12b7f5;
+}
+.fy-twitter2:before {
+  content: "\e90d";
+  color: #1da1f2;
+}
+.fy-vsco:before {
+  content: "\e90e";
+}
+.fy-wechat:before {
+  content: "\e910";
+  color: #7bb32e;
+}
+.fy-windows:before {
+  content: "\e913";
+  color: #0078d6;
+}
+.fy-wordpress2:before {
+  content: "\e914";
+  color: #21759b;
+}
+.fy-youtube2:before {
+  content: "\e915";
+  color: #f00;
+}
+.fy-home:before {
+  content: "\e900";
+}
+.fy-camera:before {
+  content: "\e90f";
+}
+.fy-music:before {
+  content: "\e911";
+}
+.fy-play:before {
+  content: "\e912";
+}
+.fy-connection:before {
+  content: "\e91b";
+}
+.fy-folder:before {
+  content: "\e92f";
+}
+.fy-price-tag:before {
+  content: "\e935";
+}
+.fy-cart:before {
+  content: "\e93a";
+}
+.fy-compass:before {
+  content: "\e949";
+}
+.fy-bubble:before {
+  content: "\e96b";
+}
+.fy-quotes-left:before {
+  content: "\e977";
+}
+.fy-quotes-right:before {
+  content: "\e978";
+}
+.fy-spinner6:before {
+  content: "\e97f";
+}
+.fy-search:before {
+  content: "\e986";
+}
+.fy-zoom-in:before {
+  content: "\e987";
+}
+.fy-zoom-out:before {
+  content: "\e988";
+}
+.fy-enlarge:before {
+  content: "\e989";
+}
+.fy-shrink:before {
+  content: "\e98a";
+}
+.fy-lock:before {
+  content: "\e98f";
+}
+.fy-unlocked:before {
+  content: "\e990";
+}
+.fy-menu:before {
+  content: "\e9bd";
+}
+.fy-happy2:before {
+  content: "\e9e0";
+}
+.fy-smile2:before {
+  content: "\e9e2";
+}
+.fy-plus:before {
+  content: "\ea0a";
+}
+.fy-minus:before {
+  content: "\ea0b";
+}
+.fy-cross:before {
+  content: "\ea0f";
+}
+.fy-checkmark:before {
+  content: "\ea10";
+}
+.fy-google-plus2:before {
+  content: "\ea8c";
+}
+.fy-facebook:before {
+  content: "\ea90";
+}
+.fy-instagram:before {
+  content: "\ea92";
+}
+.fy-twitter:before {
+  content: "\ea96";
+}
+.fy-sina-weibo:before {
+  content: "\ea9a";
+}
+.fy-youtube:before {
+  content: "\ea9d";
+}
+.fy-dribbble:before {
+  content: "\eaa7";
+}
+.fy-github:before {
+  content: "\eab0";
+}
+.fy-wordpress:before {
+  content: "\eab4";
+}
+.fy-appleinc:before {
+  content: "\eabe";
+}
+.fy-android:before {
+  content: "\eac0";
+}
