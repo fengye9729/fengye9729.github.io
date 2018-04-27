@@ -1,5 +1,5 @@
-body {
-  font-size: 16px;
+html {
+  font-size: 62.5%;
 }
 i {
   cursor: pointer;
@@ -16,6 +16,17 @@ h3 {
 h4 {
   font-size: 14px;
 }
+body {
+  overflow-x: hidden;
+}
+a {
+  color: #333333 !important;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 @media (max-width: 720px) {
   .right-col {
     display: none;
@@ -28,6 +39,7 @@ h4 {
   width: auto;
   min-height: 100%;
   transition: all 0.3s ease-in;
+  color: #16171A !important;
 }
 .article {
   width: 100%;
@@ -66,12 +78,6 @@ h4 {
 a:hover {
   text-decoration: none;
 }
-.container {
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
 @media (max-width: 720px) {
   .nav {
     display: none;
@@ -87,7 +93,7 @@ a:hover {
   text-align: center;
   padding: 1rem 0;
   transition: .3s;
-  font-size: 41px;
+  font-size: 4rem;
 }
 .nav-title a {
   color: #737373 !important;
@@ -101,16 +107,18 @@ a:hover {
   transition: 1s;
 }
 .nav-toggle-nav i {
-  width: 25px;
-  height: 22px;
+  font-size: 2rem;
 }
 .left-col {
   width: 400px;
   height: 100vh;
   border-right: 7px solid #f0f2f5;
-  overflow-y: hidden;
   position: fixed;
   left: 107px;
+  overflow-y: auto;
+}
+.left-col::-webkit-scrollbar {
+  display: none;
 }
 .left-col-close {
   position: absolute;
@@ -118,12 +126,12 @@ a:hover {
   right: 1.25rem;
 }
 .left-col-close i {
-  font-size: 25px;
+  font-size: 16px;
   color: #888888;
 }
 .left-col-author-profile {
   width: 75%;
-  margin: 5.75rem auto 0;
+  margin: 10vh auto 0;
 }
 .left-col-author-profile .profile {
   display: flex;
@@ -141,35 +149,44 @@ a:hover {
 }
 .left-col-author-profile .profile-title {
   padding: 0 1.25rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #555;
 }
 .left-col-author-profile .profile-subtitle {
-  font-size: 14px;
+  font-size: 1rem;
   padding-top: 4px;
 }
 .left-col-author-profile .social {
-  margin: 25px 0;
+  margin: 25px auto 0;
   position: relative;
   transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 .left-col-author-profile .social a {
   padding-right: 20px;
 }
-.left-col-author-profile .social::after {
+.left-col-author-profile .social i {
+  font-size: 3rem;
+}
+.left-col-author-profile .left-col-lists {
+  position: relative;
+}
+.left-col-author-profile .left-col-lists::before,
+.left-col-author-profile .left-col-lists::after {
   content: '';
   position: absolute;
-  top: 40px;
   left: 0;
   width: 140px;
   height: 1px;
   background: #D4D4D4;
 }
-.left-col-author-profile .social i {
-  font-size: 1.5rem;
+.left-col-author-profile .left-col-lists::before {
+  top: -10px;
+}
+.left-col-author-profile .left-col-lists::after {
+  bottom: -30px;
 }
 .left-col-author-profile .left-col-lists li {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 20px 60px 0;
   position: relative;
   cursor: pointer;
@@ -177,27 +194,21 @@ a:hover {
 .left-col-author-profile .left-col-lists li a {
   color: #333;
 }
+.left-col-author-profile .left-col-lists li.active a {
+  font-weight: bolder;
+}
 .left-col-author-profile .left-col-lists li.active::before {
   background: #4A90E2;
 }
 .left-col-author-profile .left-col-lists li::before {
   content: '';
   position: absolute;
-  left: 8px;
-  top: 29px;
-  width: 28px;
-  height: 14px;
+  left: 10px;
+  top: 33px;
+  width: 23px;
+  height: 12px;
   border-radius: 12px;
   background: #C3C3C3;
-}
-.left-col-author-profile .left-col-lists li:last-child::after {
-  content: '';
-  position: absolute;
-  top: 100px;
-  left: 0;
-  width: 140px;
-  height: 1px;
-  background: #D4D4D4;
 }
 .left-col-footer {
   position: absolute;
@@ -217,18 +228,12 @@ a:hover {
     width: auto !important;
     border: none !important;
   }
-  .left-col-author-profile {
-    margin: 0 auto;
-  }
   .left-col-close {
     display: none;
   }
-  .left-col li {
-    font-size: 1rem !important;
-  }
 }
 .left-sidebar-nav {
-  height: 95px;
+  height: 10vh;
   width: 100%;
   border-bottom: 12px solid #f0f2f5;
   display: flex;
@@ -240,6 +245,26 @@ a:hover {
 }
 .left-sidebar-nav .sidebar-nav-search {
   padding-right: 34px;
+}
+.left-sidebar-tags {
+  text-align: center;
+  border-bottom: 12px solid #f0f2f5;
+}
+.left-sidebar-tags h2 {
+  color: #555;
+  font-size: 2rem;
+  margin: 10px 0;
+  font-weight: 600;
+}
+.left-sidebar-tags .box-tag {
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 1px solid #CBCBCB;
+  display: inline-block;
+  margin-bottom: 27px;
+}
+.left-sidebar-tags .box-tag:nth-child(2n+1) {
+  margin-right: 30px;
 }
 .left-sidebar-post {
   width: 100%;
