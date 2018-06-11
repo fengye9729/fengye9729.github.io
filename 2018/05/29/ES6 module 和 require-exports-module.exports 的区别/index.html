@@ -122,14 +122,96 @@
     <div class="article-header">
       <!-- <div class="article-info-tag">
         
+          data
+        
+          length
+        
+          _model
+        
+          _schema
+        
+          count
+        
+          size
+        
+          forEach
+        
+          each
+        
+          toArray
+        
+          eq
+        
+          first
+        
+          last
+        
+          slice
+        
+          limit
+        
+          skip
+        
+          reverse
+        
+          shuffle
+        
+          random
+        
+          find
+        
+          findOne
+        
+          sort
+        
+          map
+        
+          reduce
+        
+          reduceRight
+        
+          filter
+        
+          every
+        
+          some
+        
+          update
+        
+          replace
+        
+          remove
+        
+          populate
+        
       </div> -->
-      无标签
+      <a class="article-tag-link" href="/tags/ES6-ES5/">ES6 ES5</a>
     </div>
     <div class="article-info">
-      <div class="article-info-title">关于我</div>
-      <div class="article-info-content"><blockquote>
-<p>Location: 杭州 </p>
-</blockquote>
+      <div class="article-info-title">ES6 module 和 require/exports/module.exports 的区别</div>
+      <div class="article-info-content"><h2 id="ES6-module-与-CommonJS-模块加载的区别"><a href="#ES6-module-与-CommonJS-模块加载的区别" class="headerlink" title="ES6 module 与 CommonJS 模块加载的区别"></a>ES6 module 与 CommonJS 模块加载的区别</h2><p>在 ES6 之前，社区制定了一些<code>模块加载方案</code>，最主要的有 <code>CommonJS</code> 和 <code>AMD</code> 两种。前者用于服务器，后者用于浏览器。</p>
+<p>ES6 模块的设计思想是尽量的<code>静态化</code>，使得<code>编译时</code>就能确定模块的依赖关系，以及输入和输出的变量</p>
+<p><code>CommonJS</code> 和 <code>AMD</code> 模块，都只能在<code>运行时</code>确定这些东西。</p>
+<ul>
+<li>ES6 module 中导入模块的属性或者方法是强绑定的，包括基础类型；CommonJS 则是普通的值传递或者引用传递</li>
+<li>CommonJS 模块是运行时的，导入导出是通过值的复制；ES6 module是静态的，导入导出实际上是建立符号的映射</li>
+<li><code>import</code> 文件必须放在顶部，<code>require</code> 不需要；<code>import/export</code> 最终会被 <code>babel</code> 编译成 <code>require/exports</code></li>
+<li>CommonJS 规范规定，每个模块内部， module 变量代表当前模块，这个变量是一个对象，它的 exports属性（即 module.exports）是对外的接口。</li>
+</ul>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// CommonJS模块</span>
+<span class="token keyword">let</span> <span class="token punctuation">{</span> stat<span class="token punctuation">,</span> exists<span class="token punctuation">,</span> readFile <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 整体加载fs模块（即加载fs的所有方法），生成一个对象（_fs），然后再从这个对象上面读取 3 个方法。这种加载称为“运行时加载”</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// ES6模块</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> stat<span class="token punctuation">,</span> exists<span class="token punctuation">,</span> readFile <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'fs'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 从fs模块加载 3 个方法，其他方法不加载。这种加载称为“编译时加载”或者静态加载，即 ES6 可以在编译时就完成模块加载，效率要比 CommonJS 模块的加载方式高。</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="ES6-module-的好处"><a href="#ES6-module-的好处" class="headerlink" title="ES6 module 的好处"></a>ES6 module 的好处</h2><ul>
+<li>静态加载</li>
+<li>不再需要UMD模块格式了</li>
+<li>将来浏览器的新 API 就能用模块格式提供，不再必须做成全局变量或者navigator对象的属性。</li>
+<li>不再需要对象作为命名空间（比如Math对象）</li>
+</ul>
 </div>
     </div>
   </div>
