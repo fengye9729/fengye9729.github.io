@@ -35,7 +35,9 @@ a:hover {
 .left-col {
   width: 400px;
   height: 100vh;
+  transition: 0.5s;
   border-right: 7px solid #f0f2f5;
+  z-index: 999;
   position: fixed;
   left: 107px;
   overflow-y: auto;
@@ -86,6 +88,7 @@ a:hover {
 }
 .left-col-author-profile .social a {
   padding-right: 20px;
+  color: #FF7A89 !important;
 }
 .left-col-author-profile .social i {
   font-size: 3rem;
@@ -158,6 +161,7 @@ a:hover {
 .left-sidebar-nav {
   height: 10vh;
   width: 100%;
+  font-size: 20px;
   border-bottom: 12px solid #f0f2f5;
   display: flex;
   justify-content: space-between;
@@ -169,7 +173,17 @@ a:hover {
 .left-sidebar-nav .sidebar-nav-search {
   padding-right: 34px;
 }
+.left-sidebar-nav .sidebar-nav-search .search-input-el {
+  display: inline-block;
+}
+.left-sidebar-nav .sidebar-nav-search input[type="search"] {
+  border: none;
+  transition: 0.5s;
+  border-bottom: 1px solid #333;
+  opacity: 0;
+}
 .left-sidebar-tags {
+  display: none;
   text-align: center;
   border-bottom: 12px solid #f0f2f5;
 }
@@ -192,6 +206,11 @@ a:hover {
 .left-sidebar-post {
   width: 100%;
 }
+.left-sidebar-post .post-card:hover {
+  transform: skew(-10deg);
+  transform-origin: 0 50%;
+  box-shadow: 0 0 5px #ccc;
+}
 .left-sidebar-post .post-card {
   border-bottom: 12px solid #f0f2f5;
   transition: all .5s ease;
@@ -211,7 +230,7 @@ a:hover {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background: #9a73b;
+  background: #d929af;
   position: absolute;
   left: 0;
   top: 6px;

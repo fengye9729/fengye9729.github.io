@@ -1,17 +1,237 @@
-(function (params) {
-  var _closeBtn = document.querySelector('.fy-cross')
-  var _openBtn = document.querySelector('.fy-menu')
-  var _leftmenu = document.querySelector('.leftcol')
-  var _sidebar = document.querySelector('.sidebar')
-  var _wrapper = document.querySelector('.right-col')
-  // _closeBtn.onclick = function () {
-  //   _leftmenu.style.display = 'none' // display动画切换需要setTimeout延迟100
-  //   _sidebar.style.display = 'block'
-  //   // _wrapper.style.left = 107 + 'px'
-  // }
-  // _openBtn.onclick = function () {
-  //   // _wrapper.style.left = 514 + 'px'
-  //   _leftmenu.style.display = 'block'
-  //   _sidebar.style.display = 'none'
-  // }
-})()
+$('.sidebar-nav-search').on('click', function () {
+  $('.search-input-el input[type=search]').attr('placeholder', '请输入').focus();
+  $('.search-input-el input[type=search]').css('opacity', 1)
+  return false
+})
+
+// $('.fa-align-justify').on('click', function () {
+//   $('.leftcol').toggleClass('active')
+//   $('.sidebar').toggleClass('active')
+//   return false
+// })
+
+$('.up-down-toggle').on('click', function () {
+  $('.left-sidebar-tags').toggle()
+  $('.fa-angle-up').toggle()
+  $('.fa-angle-down').toggle()
+  return false
+})
+
+// $('.post-card').on('click', function () {
+//   debugger
+//   $('.sidebar').toggle('active')
+// })
+
+// $(document).ready(function() {
+//   if ($('.leftcol').length === 0) {
+//     $('.sidebar').addClass('active')
+//   }
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
