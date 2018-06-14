@@ -1,0 +1,31 @@
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <%
+    var title = titlecase(page.title);
+  
+    if (is_archive()){
+
+      title = __('Page.Archives');  
+
+    } else if (is_category()){
+
+      title = __('Page.Categories') + ': ' + page.category;
+
+    } else if (is_tag()){
+
+      title = __('Page.Tags') + ': ' + page.tag;
+
+    }
+  %>
+  <title><%= config.title %></title>
+
+  <% if (theme.favicon) { %>
+
+  <link rel="icon" href="<%- theme.favicon %>">
+
+  <% } %>
+  
+  <%- css('//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') %>
+  <%- css('css/style') %>
+</head>

@@ -1,0 +1,34 @@
+<div class="layer">
+  <div class="left-col-close">
+    <i class="fa fa-times"></i>
+  </div>
+
+  <div class="left-col-author-profile">
+    <nav class="profile">
+      <a class="profile-pic"><img src="<%= theme.profileImg %>"/></a>
+      <h1 class="profile-title"><%= config.title %></h1>
+      <p class="profile-subtitle"><%= theme.profileAbout %></p>
+    </nav>
+
+    <nav class="social">
+      <!-- <h2>社交媒体</h2> -->
+      <% for (var i in theme.social) { %>
+      <a class="<%= i %>" target="_blank" href="<%- url_for(theme.social[i]) %>" title="<%= i %>">
+        <i class="fa fa-<%= i %>"></i>
+      </a>
+      <%}%>
+    </nav>
+    
+    <nav class="left-col-lists">
+      <ul>
+        <% for (var i in theme.menu) { %>
+          <li class="<% if( theme.menu[i] === '/' && is_home() || is_current(theme.menu[i]) ) { %>active <% } %>">
+            <a href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+          </li>
+        <%}%>
+      </ul>
+    </nav>
+  </div>
+
+  <%- partial('./footer') %>
+</div>

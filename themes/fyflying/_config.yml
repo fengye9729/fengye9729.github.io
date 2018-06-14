@@ -1,0 +1,37 @@
+menu:
+  首页: /
+  归档: archive
+  关于我: about
+  标签: tags
+#site title
+title: Fe
+
+#author profile
+profile: 
+  logo: fyflying
+  avatar: /img/header.jpg
+  author: Fe_
+  location: 杭州
+
+social:
+  twitter: "https://twitter.com/fe_feng"
+  # facebook: "#"
+  github: "https://github.com/fengye9729"
+  google: "#"
+  # dribbble2: '#'  
+  instagram: 'https://www.instagram.com/fe_feng/'
+  #weibo: "#"
+  # rss: "#"
+  # zhihu: "#"
+  segmentfault: "https://segmentfault.com/u/fyflying"
+  #bilibili: "#"
+  #acfun: "#"
+  mail: "fengye9729@gmail.com"
+  #linkedin: "#"
+
+# Content
+excerpt_link: 阅读更多
+
+favicon: /favicon.png
+profileImg: /img/xiaomai.jpg
+profileAbout: 等风来
