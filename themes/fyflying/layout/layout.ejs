@@ -7,13 +7,23 @@
 		<div class="container">
 			<%- partial('_partial/nav') %>
 			
-			<div class="left-col">
-				<!-- 浮层 -->
-				<%- partial('_partial/layer') %>
-				<!-- 侧边栏 -->
-				<%- partial('_partial/sidebar') %>
-			</div>
-			<div class="right-col">
+<% if (!is_post()) { %>
+				<div class="left-col">
+<% } else { %>
+<div class="left-col hide-left-col">
+	<% } %>
+					<!-- 浮层 -->
+					<%- partial('_partial/layer') %>
+						<!-- 侧边栏 -->
+						<%- partial('_partial/sidebar') %>
+				</div>
+
+<% if (!is_post()) { %>
+<div class="right-col">
+<% } else { %>
+<div class="right-col show-right-col">
+<% } %>
+
 				<%- body %>
 			</div>
 		</div>

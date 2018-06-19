@@ -2,10 +2,10 @@
   <div class="left-sidebar-nav">
     <div class="sidebar-nav-title">
       <a href="#">最新文章</a>
-      <!-- <span class="up-down-toggle">
+      <span class="up-down-toggle">
         <i class="fa fa-angle-down"></i>
         <i class="fa fa-angle-up" style="display: none;"></i>
-      </span> -->
+      </span>
 
     </div>
     <div class="sidebar-nav-search">
@@ -13,12 +13,12 @@
       <i class="fa fa-search"></i>
     </div>
   </div>
-  <!-- <div class="left-sidebar-tags">
+  <div class="left-sidebar-tags">
     <h2>文章分类</h2>
     <div class="widget">
       <%- list_tags({show_count: theme.show_count}) %>
     </div>
-  </div> -->
+  </div>
   <div class="left-sidebar-post">
     <% site.posts.sort('date',-1).each(function (post) { %>
     <div class="post-card">
