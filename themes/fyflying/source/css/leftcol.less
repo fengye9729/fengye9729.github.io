@@ -132,7 +132,7 @@
       }
       li {
         font-size: 2rem;
-        padding: 20px 60px 0;
+        padding: 20px 60px;
         position: relative;
         cursor: pointer;
         a {
@@ -148,12 +148,13 @@
         background: #4A90E2;
       }
       li::before {
-        content: '';
+        content: '';  
         position: absolute;
         left: 10px;
-        bottom: 6px;
         width: 23px;
         height: 12px;
+        top: 50%;
+        transform: translateY(-50%);
         border-radius: 12px;
         background: #C3C3C3;
       }
