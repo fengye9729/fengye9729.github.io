@@ -1,15 +1,4 @@
 <section class="block">
-    <% if( is_tag()){ %>
-        <span class="page-title"><%=  __('Page.Tags') %></span> 
-        
-        <% site.tags.sort('date',-1).each( function (tag){%>
-            
-            <a class="tag-wrap slideDownMin" href="<%- url_for(tag.path) %>">    
-            <span class="iconfont icon-tag-inner"></span>           
-               <span class="tag-name"> <%- tag.name %> </span>
-               <span class="meta-count"><%- tag.length %></span>  
-             </a>
-        <% })%>
-    <%}%>
+    hello 
 </section>
 
