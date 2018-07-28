@@ -1,7 +1,6 @@
 @import "./reset";
-@import "./leftcol";
-@import "./var";
 @import "./scroll.css";
+@import "./var.less";
 html {
   font-size: 62.5%;
 } // 为了使用rem方便 1rem = 16px 10px = 0.625rem
@@ -30,7 +29,8 @@ body {
 }
 
 a {
-  color: @a-default-color
+  color: @a-default-color;
+  cursor: pointer;
 }
 
 a:hover {
@@ -40,27 +40,131 @@ a:hover {
 .container {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
-.right-col {
-  position: absolute;
-  left: 514px;
-  right: 0;
-  width: auto;
-  min-height: 100%;
-  transition: all .3s ease-in;
-  color: @rightcol-color  !important;
-}
-
-@media (max-width: 840px) {
-  .show-right-col {
-    transition: .8s;
-		left: 0;
-		width: 100%;
-    top: 88px;
+.nav {
+  width: 100px;
+  height: 100%;
+  border-right: 7px solid @border-color;
+  position: fixed;
+  &-title {
+    text-align: center;
+    padding: 1rem 0;
+    transition: .3s;
+    font-size: @title-size;
+    a {
+      color: @headerFontColor;
+    }
+  }
+  &-toggle-nav {
+    position: absolute;
+    bottom: 2rem;
+    left: calc(50% - 12.5px);
+    color: @nav-toggle-nav-color;
+    cursor: pointer;
+    transition: 1s;
+    i {
+      font-size: 2rem;
+    }
   }
 }
+.main {
+  position: relative;
+  left: 107px;
+  margin-right: 107px;
+  .header {
+    border-bottom: 7px solid @border-color;
+    height: 60px;
+  }
+  .content {
+    max-width: 860px;
+    margin: 0 auto;
+    font-size: 18px;
+    .header-title{
+      line-height: 60px;
+      color: @headerFontColor;
+    }
+  }
+  .content #nav {
+      float: right;
+      font-size: 24px;
+      line-height: 60px;
+      a {
+        padding: 0 15px;
+      }
+      .twitter {
+        color: #1DA1F2;
+      }
+      .facebook {
+        color: #3B5998;
+      }
+      .instagram {
+        color: #E4405F;
+      }
+      .github {
+        color: #181717;
+      }
+      .dribbble {
+        color: #EA4C89;
+      }
+      .google {
+        color: #4285f4;
+      }
+      .rss {  
+        color: #FFA500;
+      }
+      .linkedin {
+        color: #0077B5;
+      }
+      .weibo {
+        color: #E6162D;
+      }
+    }
+  .content-posts{
+    .post-card {
+      margin: 25px 0 35px;
+      line-height: 25px;
+      min-height: 50px;
+    }
+    .post-card-content-time {
+      font-size: 14px;
+      color: #999;
+    }
+    .post-card-content {
+      margin: 8px 0 12px;
+      h2 {
+        color: #222222;
+        font-weight: bold;
+        font-family: "Georgia","Xin Gothic","PingFang SC","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",sans-serif;
+      }
+    }
+  }
+}
+#footer {
+  padding: 10px 0 20px;
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+  font-family: "Optima","Helvetica Neue",sans-serif;
+}
+// .right-col {
+//   position: absolute;
+//   left: 514px;
+//   right: 0;
+//   width: auto;
+//   min-height: 100%;
+//   transition: all .3s ease-in;
+//   color: @rightcol-color  !important;
+// }
+
+// @media (max-width: 840px) {
+//   .show-right-col {
+//     transition: .8s;
+// 		left: 0;
+// 		width: 100%;
+//     top: 88px;
+//   }
+// }
 
 .article {
   position: relative;
@@ -100,10 +204,19 @@ a:hover {
     }
   }
   &-info {
-    padding: 20px;
     &-title {
       color: @headerFontColor;
       font-size: 30px;
+      border-bottom: 1px solid #eee;    
+      padding-top: 1em;
+      padding-bottom: .5em;
+    }
+    h2 {
+      padding: .6em 0;
+    }
+    .info-time {
+      color: rgba(0,0,0,.5);
+      font-size: 13px;
     }
     @media screen and (max-width: 420px) {
       &-title {
@@ -119,6 +232,7 @@ a:hover {
         padding-top: 0;
         margin: 0 20px;
       }
+      padding: 1em 0;
       h2 {
         font-size: 28px;
         color: @headerFontColor;
@@ -137,7 +251,6 @@ a:hover {
         padding-left: 20px;
         padding-bottom: 15px; // border-bottom: 1px dotted #eee8d3;
         margin-top: 30px;
-        margin-bottom: 30px;
         &:after {
           content: "";
           position: absolute;
@@ -159,7 +272,6 @@ a:hover {
         line-height: 28px;
         font-size: 18px;
         color: @contentColor;
-        margin-top: 16px;
         word-break: break-all;
         word-wrap: break-word;
         white-space: pre-wrap;

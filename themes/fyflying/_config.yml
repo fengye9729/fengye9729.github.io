@@ -14,19 +14,14 @@ profile:
   location: 杭州
 
 social:
-  twitter: "https://twitter.com/fe_feng"
-  # facebook: "#"
+  twitter: https://twitter.com/fe_feng
+  #facebook: "#"
   github: "https://github.com/fengye9729"
-  google: "#"
-  # dribbble2: '#'  
+  #google: "#"
+  #dribbble: '#'  
   instagram: 'https://www.instagram.com/fe_feng/'
-  #weibo: "#"
-  # rss: "#"
-  # zhihu: "#"
-  segmentfault: "https://segmentfault.com/u/fyflying"
-  #bilibili: "#"
-  #acfun: "#"
-  mail: "fengye9729@gmail.com"
+  weibo: "https://www.weibo.com/u/3460186094"
+  #rss: "#"
   #linkedin: "#"
 
 # Content

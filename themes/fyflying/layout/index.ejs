@@ -1,3 +1,15 @@
-<div style="height: 100vh; display: flex; justify-content: center; align-items: center">
-  <h1>广告位待定</h1>
+<div class="content content-posts">
+  <% site.posts.sort('date',-1).each(function (post) { %>
+    <div class="post-card">
+        <div class="post-card-content-time">
+          <%= date(post.date, "YYYY-MM-DD") %>
+        </div>
+        <div class="post-card-content">
+          <div class="detail">
+            <h2><a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a></h2>
+          </div>
+          
+        </div>
+    </div>
+    <% }) %>
 </div>
