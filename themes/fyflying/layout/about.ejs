@@ -1,0 +1,22 @@
+<div class="about content">
+
+	<h3 align="center"><%- page.content %></h3>
+	
+	<div id="comment"></div>
+  <!-- 留言板 -->
+	<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+	<script>
+	var gitment = new Gitment({
+		id: 'comment', // 可选。默认为 location.href
+		owner: 'fengye9729',
+		repo: 'fengye9729.github.io',
+		oauth: {
+			client_id: 'bebd1f2dedd57d78a7db',
+			client_secret: '6d3d2ec285f4fa99dd24ec27a42b465a40cec1ca',
+		},
+	})
+	gitment.render('comment')
+
+  
+	</script>
+</div>

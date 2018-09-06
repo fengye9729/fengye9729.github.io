@@ -5,10 +5,3 @@ db.json
 node_modules/
 public/
 .deploy*/
-.idea
-/.deploy_git
-/public
-.deploy_git
-.vscode
-.history
-package-lock.json

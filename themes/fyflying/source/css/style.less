@@ -56,6 +56,16 @@ a:hover {
       color: @headerFontColor;
     }
   }
+  .comment {
+    transition: .3s;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 2.5rem;
+    a {
+      color: @headerFontColor;
+    }
+  }
   &-toggle-nav {
     position: absolute;
     bottom: 2rem;
@@ -168,6 +178,9 @@ a:hover {
   }
   .content {
     padding: 0 18px;
+  }
+  #nav a {
+    padding: 0 5px !important;
   }
 }
 #footer {
@@ -327,4 +340,8 @@ a:hover {
       }
     }
   }
+}
+
+.about {
+  padding-top: 1em;
 }

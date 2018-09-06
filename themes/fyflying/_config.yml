@@ -1,10 +1,7 @@
 menu:
   首页: /
-  归档: archive
-  关于我: about
-  标签: tags
-#site title
-title: Fe
+  About: /about
+  title: Fe
 
 #author profile
 profile: 
