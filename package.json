@@ -2,7 +2,7 @@
   "name": "fefeng.cn",
   "version": "0.0.0",
   "private": true,
-  "homepage": "http://fefeng.cn",
+  "homepage": "http://fengye9729.github.io",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
