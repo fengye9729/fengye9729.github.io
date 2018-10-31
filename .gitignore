@@ -4,4 +4,6 @@ db.json
 *.log
 node_modules/
 public/
-.deploy*/
+.nuxt
+package-lock.json
+dist
