@@ -1,20 +1,20 @@
 {
-  "name": "fefeng.cn",
-  "version": "0.0.0",
+  "name": "blog.fefeng.cn",
+  "version": "1.0.0",
   "private": true,
-  "homepage": "http://fengye9729.github.io",
+  "homepage": "http://ShiRouMi.github.io",
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "deploy": "nuxt generate && gh-pages -d dist -b master -t"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "yarn docs:build && gh-pages -d docs/.vuepress/dist -b master -t"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fengye9729/fengye9729.github.io.git"
+    "url": "git+https://github.com/ShiRouMi/ShiRouMi.github.io.git"
   },
   "dependencies": {
     "gh-pages": "^2.0.1",
     "less": "^3.0.1",
-    "nuxt": "^2.2.0"
+    "vuepress": "^1.0.0-alpha.47"
   }
 }
