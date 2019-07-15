@@ -26,7 +26,7 @@ module.exports = {
         {
           title: "Vue",
           path: "/vue/",
-          children: ["/vue/createdata", "/vue/reactiveData"]
+          children: ["/vue/createdata", "/vue/reactiveData", "/vue/computed"]
         },
         {
           title: "React",
