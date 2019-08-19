@@ -6,7 +6,8 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "yarn docs:build && gh-pages -d docs/.vuepress/dist -b master -t"
+    "deploy": "yarn docs:build && gh-pages -d docs/.vuepress/dist -b master -t",
+    "d": "bash deploy.sh" 
   },
   "repository": {
     "type": "git",

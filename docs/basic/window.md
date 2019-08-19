@@ -57,3 +57,11 @@ __proto__: ƒ EventTarget()
 当你准备更新动画时你应该调用此方法。这将使浏览器在下一次重绘之前调用你传入给该方法的动画函数(即你的回调函数)。回调函数执行次数通常是每秒60次，但在大多数遵循W3C建议的浏览器中，回调函数执行次数通常与浏览器屏幕刷新次数相匹配。
 
 `window.requestAnimationFrame(callback);`
+
+## location
+`window.location` 只读属性，返回一个 `Location` 对象，其中包含有关文档当前位置的信息。
+比如在前端路由的使用中
+- hash 路由获取 hash 值 `window.location.hash`
+- history 路由获取到对象的位置 `window.location.pathname`
+
+![](../images/location.png)

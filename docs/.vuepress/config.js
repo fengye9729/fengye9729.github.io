@@ -1,6 +1,9 @@
 module.exports = {
   title: "ShiRouMi",
   description: "personal site",
+  head: [
+    ['link', { rel: 'icon', href: '/fefeng.ico' }]
+  ],
   configureWebpack: {
     resolve: {
       alias: {
@@ -10,23 +13,100 @@ module.exports = {
   },
   themeConfig: {
     nav: [
-      { text: "Home", link: "/" },
-      { text: "news", link: "/news/" },
-      { text: "basic", link: "/basic/" }
+      { text: "Home", link: "/frontend/" },
+      { text: "basic", link: "/basic/" },
+      { text: "q", link: "/q/" }
     ],
     sidebar: {
+      "/q/": [
+        {
+          title: '基础',
+          children: [
+            "深浅拷贝",
+            "call apply bind",
+            "promise",
+            "箭头函数",
+            "class",
+            "原型",
+            "eventloop",
+            "监听DOM变动",
+            "event",
+            "HTML5"
+          ]
+        },
+        {
+          title: "CSS",
+          children: [
+            "flex",
+            "grid",
+            "水平垂直居中",
+            "CSS3",
+            "BFC",
+            "cssmixins",
+            "mobile",
+            "mobileDev"
+          ]
+        },
+        {
+          title: 'Vue',
+          children: [
+            "vue-new-api",
+            "MVVM",
+            "观察者模式",
+            "双向绑定原理",
+            "数据驱动",
+            "响应式原理",
+            "Vue3.0",
+            "EventEmitter",
+            "VueRouter实现原理",
+            "虚拟DOM",
+            "生命周期",
+            "keep-alive",
+            "$nextTick",
+            "vue_key",
+            "vue-array",
+            "vue-optimization",
+            "vue-bigdata",
+            "vue-agent",
+            "vue-father-son-order",
+            "vue-proxy",
+            "vuex-mutation"
+          ]
+        },
+        {
+          title: 'Network',
+          children: [
+            "跨域",
+            "http",
+            "缓存",
+            "性能优化",
+            "UDP&TCP",
+            "安全"
+          ]
+        }
+      ],
       "/news/": ["2019-5-8", "2019-6-11"],
-      "/basic/": ["window", "element"],
+      "/basic/": ["window", "element", "event", "HTML5"],
       "/": [
         {
           title: "前端",
           path: "/frontend/",
-          children: ["/frontend/axios"]
+          children: [
+            "/frontend/axios", 
+            "/frontend/less",
+            "/frontend/fragment"
+          ]
         },
         {
           title: "Vue",
           path: "/vue/",
-          children: ["/vue/createdata", "/vue/reactiveData", "/vue/computed"]
+          children: [
+            "/vue/testObj",
+            "/vue/store",
+            "/vue/createdata", 
+            "/vue/reactiveData", 
+            "/vue/computed", 
+          ]
         },
         {
           title: "React",
@@ -37,6 +117,11 @@ module.exports = {
           title: "后端",
           path: "/backend/",
           children: ["/backend/charles", "/backend/agent"]
+        },
+        {
+          title: "webpack",
+          path: "/webpack/",
+          children: ["/webpack/优化Vue打包速度"]
         }
       ]
     }
