@@ -4,6 +4,7 @@
 this.$axios.get('/getUserByName',{
     params:{
         names:['qwe','asd'] + '', // 将数组转成字符串
+        // 或者是 ['qwe','asd'].toString()
     }
 }).then(res=>{
     console.log(res)

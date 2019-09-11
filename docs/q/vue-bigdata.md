@@ -14,7 +14,7 @@
   
 可以使用虚拟列表，`Object.freeze` 冻结对象，`Object.preventExtentsion`阻止对象扩展来阻止 vue 给每个对象加上 get、set, 但是缺点是**不能响应**了
 
-- **按需加载局部数据, 虚拟列表，无限下拉刷新**
+- **按需加载局部数据，虚拟列表，无限下拉刷新**
 - js运行异步处理:
   分割任务，实现时间切片处理, 类似 react fiber, 每次执行记录时间, 超过一定执行时间则 settimeout 或 requestAnimation 推迟到下一个时间片,一般一个时间片为16ms
-- 大量纯展示的数据,不需要追踪变化的,**用 `object.freeze` 冻结**
+- 大量纯展示的数据，不需要追踪变化的，**用 `object.freeze` 冻结**

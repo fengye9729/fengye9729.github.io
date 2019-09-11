@@ -65,3 +65,6 @@ __proto__: ƒ EventTarget()
 - history 路由获取到对象的位置 `window.location.pathname`
 
 ![](../images/location.png)
+
+
+[JavaScript中的各种宽高以及位置总结](https://segmentfault.com/a/1190000002545307#articleHeader0)

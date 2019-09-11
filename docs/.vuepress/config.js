@@ -14,6 +14,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: "Home", link: "/frontend/" },
+      { text: "new", link: "/news/" },
       { text: "basic", link: "/basic/" },
       { text: "q", link: "/q/" }
     ],
@@ -25,18 +26,22 @@ module.exports = {
             "深浅拷贝",
             "call apply bind",
             "promise",
+            "async-await",
+            "axios",
+            "eventloop",
             "箭头函数",
             "class",
             "原型",
-            "eventloop",
             "监听DOM变动",
             "event",
-            "HTML5"
+            "HTML5",
+            "防抖与节流"
           ]
         },
         {
           title: "CSS",
           children: [
+            "css",
             "flex",
             "grid",
             "水平垂直居中",
@@ -50,13 +55,14 @@ module.exports = {
         {
           title: 'Vue',
           children: [
-            "vue-new-api",
+            "vue",
             "MVVM",
             "观察者模式",
             "双向绑定原理",
             "数据驱动",
             "响应式原理",
             "Vue3.0",
+            "vue-proxy",
             "EventEmitter",
             "VueRouter实现原理",
             "虚拟DOM",
@@ -69,8 +75,7 @@ module.exports = {
             "vue-bigdata",
             "vue-agent",
             "vue-father-son-order",
-            "vue-proxy",
-            "vuex-mutation"
+            "vuex"
           ]
         },
         {
@@ -85,27 +90,36 @@ module.exports = {
           ]
         }
       ],
-      "/news/": ["2019-5-8", "2019-6-11"],
-      "/basic/": ["window", "element", "event", "HTML5"],
+      "/news/": ["2019-8-28", "es2019","2019-6-11", "2019-5-8",],
+      "/basic/": ["window", "element", "event", "HTML5", "object"],
       "/": [
         {
           title: "前端",
           path: "/frontend/",
           children: [
+            "/frontend/project",
+            "/frontend/handle-error",
+            "/frontend/fe-frame",
+            "/frontend/js-exception-handling",
             "/frontend/axios", 
             "/frontend/less",
-            "/frontend/fragment"
+            "/frontend/fragment",
+            "/frontend/code-multy"
           ]
         },
         {
           title: "Vue",
           path: "/vue/",
           children: [
+            "/vue/vuex-persist",
+            "/vue/vue-new-api",
+            "/vue/keepalive_forward_back",
+            "/vue/keepalive-name",
             "/vue/testObj",
             "/vue/store",
             "/vue/createdata", 
             "/vue/reactiveData", 
-            "/vue/computed", 
+            "/vue/computed"
           ]
         },
         {

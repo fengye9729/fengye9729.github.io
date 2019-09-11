@@ -8,7 +8,7 @@
 - 可以检测数组索引的变化和 length 的变化
 - 支持 Map、Set、WeakMap 和 WeakSet
 
-Vue 三要素
+**Vue 三要素**
 - 响应式：如何监听数据变化
 - 模板引擎：如何解析模板
 - 渲染：如何将监听到的数据和解析后的 HTML 进行渲染
@@ -257,9 +257,11 @@ class Vue {
 它在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写
 
 - Proxy可以直接监听对象而非属性
+
 Proxy 直接可以劫持整个对象,并返回一个新对象,不管是操作便利程度还是底层功能上都远强于 `Object.defineProperty`
 
 - Proxy可以直接监听数组的变化
+
 Proxy不需要那么多 hack（即使hack也无法完美实现监听）就可以无压力监听数组的变化,我们都知道,标准永远优先于hack。
 
 - Proxy 有多达13种拦截方法,不限于 apply、ownKeys、deleteProperty、has等等是 Object.defineProperty 不具备的。
